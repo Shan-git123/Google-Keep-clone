@@ -12,7 +12,6 @@ const Keep = () => {
   );
 
   const addItem = (note) => {
-   
     let myNotes = [];
 
     myNotes.push(...addNotes, note);
@@ -44,18 +43,19 @@ const Keep = () => {
     <>
       <Header />
       <CreateNote passItem={addItem} />
-
-      {x.map((val, index) => {
-        return (
-          <Note
-            key={index}
-            id={index}
-            title={val.title}
-            content={val.content}
-            deletenote={onDelete}
-          />
-        );
-      })}
+      <div className="container">
+        {x.map((val, index) => {
+          return (
+            <Note
+              key={index}
+              id={index}
+              title={val.title}
+              content={val.content}
+              deletenote={onDelete}
+            />
+          );
+        })}
+      </div>
       <Footer />
     </>
   );

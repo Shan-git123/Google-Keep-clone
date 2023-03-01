@@ -5,24 +5,77 @@ body {
 }
 .header {
   background-color: #ff9f29;
-  height: 80px;
+
   box-shadow: 5px 5px 5px #ccc;
 }
 .header h2 {
   display: inline-block;
   padding-left: 30px;
-  font-size: 40px;
+
   margin-top: 20px;
 }
 .fa-note-sticky {
   font-size: 40px;
   padding-left: 20px;
 }
+@media screen and (min-width: 300px) {
+  .header {
+    height: auto;
+    width: 100vw;
+    padding-left: 3px;
+  }
+  .fa-note-sticky {
+    padding-left: 2px;
+  }
+  .header h2 {
+    font-size: 30px;
+  }
+  .create_main {
+    width: 40%;
+  }
+  .note {
+    height: 200px;
+    width: 80%;
+    margin: 10px auto;
+    border-radius: 10px;
+    overflow: auto;
+  }
+  .note button {
+    position: fixed;
+    outline: none;
+    border: none;
+
+    bottom: 0px;
+    right: 22px;
+    box-shadow: 5px 5px 5px #ccc;
+    background-color: #fff;
+    border-radius: 40%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .header {
+    height: 80px;
+  }
+  .header h2 {
+    font-size: 40px;
+  }
+  .create_main {
+    width: 29%;
+  }
+  .note {
+    height: 150px;
+    width: 21%;
+    margin-top: 30px;
+    margin-bottom: 80px;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+}
 
 .create_main {
   background-color: #fff;
   box-shadow: 3px 5px 14px 3px #ccc;
-  width: 29%;
+
   margin: 50px auto;
   position: relative;
 }
@@ -65,17 +118,18 @@ body {
   color: #fff;
   background-color: #ff9f29;
 }
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-bottom: 80px;
+}
 .note {
   display: inline-block;
+
   background-color: #fff;
   box-shadow: 3px 5px 14px 3px #ccc;
-  height: 150px;
-  width: 21%;
   position: relative;
-  margin-top: 30px;
-  margin-bottom: 100px;
-  margin-left: 15px;
-  margin-right: 15px;
 }
 .note h1 {
   font-size: 20px;
@@ -87,18 +141,19 @@ body {
   font-size: 18px;
   padding-left: 15px;
   font-family: "IBM Plex Serif", serif;
-  margin: 0 0 5px 5px;
+  margin: 0 0 1px 5px;
 }
 .note button {
   position: absolute;
   outline: none;
   border: none;
-  bottom: -17px;
+  bottom: 4px;
   right: 22px;
   box-shadow: 5px 5px 5px #ccc;
   background-color: #fff;
   border-radius: 40%;
 }
+
 .note button .fa-trash-can {
   color: #ff9f29;
   font-size: 25px;
@@ -108,10 +163,6 @@ body {
 }
 
 .footer {
-  position: fixed;
-  bottom: 0;
-  left: 45%;
+  text-align: center;
   color: rgb(100, 96, 96);
 }
-
-
