@@ -1,7 +1,6 @@
 import Header from "./Header";
 import CreateNote from "./CreateNote";
 import Note from "./Note";
-import Footer from "./Footer";
 import { useState } from "react";
 
 const Keep = () => {
@@ -56,7 +55,7 @@ const Keep = () => {
           );
         })}
       </div>
-      <Footer />
+      
     </>
   );
 };
